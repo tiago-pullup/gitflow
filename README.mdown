@@ -22,7 +22,7 @@ Or have a look at one of these screen casts:
 
 Installing git-flow
 -------------------
-See the Wiki for up-to-date [Installation Instructions](https://github.com/nvie/gitflow/wiki/Installation).
+See the Wiki for up-to-date [Installation Instructions](https://github.com/tiago-pullup/gitflow/wiki/Installation).
 
 
 Integration with your shell
