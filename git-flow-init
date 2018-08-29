@@ -311,6 +311,19 @@ cmd_default() {
 
 
 	# TODO: what to do with origin?
+	
+	# Flag keep branchs
+	if ! git config --get gitflow.flag.keep >/dev/null 2>&1 || flag force; then
+		default_suggestion=$(git config --get gitflow.flag.keep || echo "true")
+		printf "Keep banchs Default? [$default_suggestion] "
+		if noflag defaults; then
+			read answer
+		else
+			printf "\n"
+		fi
+		[ "$answer" = "-" ] && prefix= || prefix=${answer:-$default_suggestion}
+		git_do config gitflow.flag.keep "$prefix"
+	fi
 }
 
 cmd_help() {
